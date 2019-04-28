@@ -1,0 +1,12 @@
+[
+    {
+        "action": {
+            "type": "css-display-none",
+            "selector": "ytd-browse[page-subtype*='home'], #related, .html5-endscreen, .ytp-ce-element.ytp-ce-playlist, .ytp-ce-element.ytp-ce-video, .ytp-ce-element.ytp-ce-channel, .ytp-ce-element.ytp-ce-website, .annotation.annotation-type-custom.iv-branding"
+        },
+        "trigger": {
+            "url-filter": "youtube.com*",
+            "resource-type": ["style-sheet"]
+        }
+    }
+]
