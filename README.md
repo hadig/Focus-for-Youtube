@@ -1,7 +1,7 @@
 # Focus for YouTube
 
 
-** Safari Extension to consume YouTube responsibly. It will hide all suggested videos on the page. **
+**Safari Extension to consume YouTube responsibly. It will hide all suggested videos on the page.**
 
 *Designed to run without any permissions.*
 ***
