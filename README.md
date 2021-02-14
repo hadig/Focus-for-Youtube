@@ -1,4 +1,4 @@
-# Focus for YouTube&trade;
+# ![logo](/Assets.xcassets/AppIcon.appiconset/Icon-128.png?raw=true) Focus for YouTube&trade;
 
 
 **Safari Extension to consume YouTube&trade; responsibly. It will hide all suggested videos on the page.**
