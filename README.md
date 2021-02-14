@@ -1,4 +1,4 @@
-#Focus for YouTube&trade;
+# Focus for YouTube&trade;
 
 
 **Safari Extension to consume YouTube&trade; responsibly. It will hide all suggested videos on the page.**
