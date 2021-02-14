@@ -7,6 +7,8 @@
 ***
 ~Mac App Store Link: https://itunes.apple.com/at/app/focus-for-youtube/id1447962180?mt=12~  
 Developer Membership expired R.I.P.
+
+To get us back on the App Store and future updates, consider supporting here: https://ko-fi.com/hadig
 ***
 Download under the release section: https://github.com/hadig/Focus-for-Youtube/releases
 
