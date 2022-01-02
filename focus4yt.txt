@@ -6,8 +6,22 @@
 ! This list is based on DandelionSprout Even More Pure Video Experience filter list https://github.com/DandelionSprout/adfilt/blob/master/YouTubeEvenMorePureVideoExperience.txt
 ! Homepage: https://github.com/hadig/Focus-for-Youtube
 
-! Removed Home Page feed
+! Removes Home Page feed
 youtube.com##ytd-browse[page-subtype*='home']
+m.youtube.com##ytm-browse > ytm-single-column-browse-results-renderer > div > div[tab-identifier*="FEwhat_to_watch"]
+
+! Removes unnecessary section buttons
+youtube.com###items > ytd-guide-entry-renderer[is-primary]:nth-child(1)
+youtube.com###items > ytd-guide-entry-renderer[is-primary]:nth-child(2)
+youtube.com###items > ytd-guide-entry-renderer[is-primary]:nth-child(4)
+youtube.com###items > ytd-guide-entry-renderer[is-primary]:nth-child(5)
+youtube.com###guide-renderer > #sections > ytd-guide-section-renderer:nth-child(2) > #items > ytd-guide-entry-renderer:last-child
+youtube.com###guide-renderer > #sections > ytd-guide-section-renderer:nth-child(3)
+youtube.com###guide-renderer > #sections > ytd-guide-section-renderer:nth-child(4)
+youtube.com###guide-renderer > #sections > ytd-guide-section-renderer:nth-child(5)
+youtube.com###guide-renderer > #sections > ytd-guide-section-renderer:nth-child(6)
+youtube.com##ytd-mini-guide-renderer > #items > ytd-mini-guide-entry-renderer:nth-child(1)
+youtube.com##ytd-mini-guide-renderer > #items > ytd-mini-guide-entry-renderer:nth-child(2)
 
 ! Removes video suggestions
 ##.ytp-endscreen-content
