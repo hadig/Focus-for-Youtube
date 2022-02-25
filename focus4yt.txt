@@ -13,6 +13,7 @@ m.youtube.com##ytm-browse > ytm-single-column-browse-results-renderer > div > di
 ! Removes unnecessary section buttons
 youtube.com###items > ytd-guide-entry-renderer[is-primary]:nth-child(1)
 youtube.com###items > ytd-guide-entry-renderer[is-primary]:nth-child(2)
+youtube.com###items > ytd-guide-entry-renderer[is-primary]:nth-child(3)
 youtube.com###items > ytd-guide-entry-renderer[is-primary]:nth-child(4)
 youtube.com###items > ytd-guide-entry-renderer[is-primary]:nth-child(5)
 youtube.com###guide-renderer > #sections > ytd-guide-section-renderer:nth-child(2) > #items > ytd-guide-entry-renderer:last-child
