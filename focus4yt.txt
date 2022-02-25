@@ -23,6 +23,7 @@ youtube.com###guide-renderer > #sections > ytd-guide-section-renderer:nth-child(
 youtube.com###guide-renderer > #sections > ytd-guide-section-renderer:nth-child(6)
 youtube.com##ytd-mini-guide-renderer > #items > ytd-mini-guide-entry-renderer:nth-child(1)
 youtube.com##ytd-mini-guide-renderer > #items > ytd-mini-guide-entry-renderer:nth-child(2)
+youtube.com##ytd-mini-guide-renderer > #items > ytd-mini-guide-entry-renderer:nth-child(3)
 
 ! Removes video suggestions
 ##.ytp-endscreen-content
