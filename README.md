@@ -7,7 +7,12 @@ https://raw.githubusercontent.com/hadig/Focus-for-Youtube/master/focus4yt.txt
 Also works on other browsers e.g. Firefox with uBlock origin
 ###
 
+## iOS / iPadOS Usage:
+1. Download Userscripts by [@quoid](https://www.github.com/quoid): https://github.com/quoid/userscripts
 
+2. Add this script by [@Syndamia](https://github.com/Syndamia): https://github.com/Syndamia/min-youtube-element-blocker
+
+3. For extra Ad Blocking also add this script I modified from [@AdGuard](https://github.com/AdguardTeam/BlockYouTubeAdsShortcut): https://raw.githubusercontent.com/hadig/Focus-for-Youtube/main/blockYTads
 ***
 
 
