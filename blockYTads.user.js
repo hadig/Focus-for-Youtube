@@ -1,30 +1,30 @@
 // ==UserScript==
 // @name AdGuard script block YouTube ads
-// @version 0.1
+// @version 0.2
 // @match *://*.youtube.com/*
 // @grant none
 // @noframes
 // @run-at document-start
 // @namespace https://github.com/hadig
-// @description Block Ads YouTube use AdGuard script
+// @description Block YouTube Ads with AdGuard script
 // ==/UserScript==
 
 
 /**
- * This file is part of AdGuard's Block YouTube Ads (https://github.com/AdguardTeam/BlockYouTubeAdsShortcut).
+ * This file is a modified version of AdGuard's Block YouTube Ads (https://github.com/AdguardTeam/BlockYouTubeAdsShortcut).
  *
- * AdGuard's Block YouTube Ads is free software: you can redistribute it and/or modify
+ * This script is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * AdGuard's Block YouTube Ads is distributed in the hope that it will be useful,
+ * This script is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
- * You should have received a copy of the GNU General Public License
- * along with AdGuard's Block YouTube Ads.  If not, see <http://www.gnu.org/licenses/>.
+ * For a copy of the GNU General Public License
+ * see <http://www.gnu.org/licenses/>.
  */
 
 /**
@@ -166,6 +166,21 @@
             const style = document.createElement('style');
             style.innerHTML = rule;
             document.head.appendChild(style);
+        };
+
+        /**
+         * Calls the "callback" function on every DOM change, but not for the tracked events
+         * @param {Function} callback callback function
+         */
+        const observeDomChanges = (callback) => {
+            const domMutationObserver = new MutationObserver((mutations) => {
+                callback(mutations);
+            });
+
+            domMutationObserver.observe(document.documentElement, {
+                childList: true,
+                subtree: true,
+            });
         };
 
         /**
@@ -324,6 +339,13 @@
                     el.appendChild(logo);
                     addAdGuardLogoStyle();
                 }
+            } else if (window.location.hostname === 'www.youtube-nocookie.com') {
+                const code = document.querySelector('#yt-masthead #logo-container .content-region');
+                if (code) {
+                    code.innerHTML = '';
+                    code.appendChild(logo);
+                    addAdGuardLogoStyle();
+                }
             }
         };
 
@@ -334,10 +356,15 @@
         // Applies CSS that hides YouTube ad elements
         hideElements(window.location.hostname);
 
-        // Other changes
+        // Some changes should be re-evaluated on every page change
         addAdGuardLogo();
         hideDynamicAds();
         autoSkipAds();
+        observeDomChanges(() => {
+            addAdGuardLogo();
+            hideDynamicAds();
+            autoSkipAds();
+        });
     };
 
     const script = document.createElement('script');
